@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Accessible Tabs Code Challenge</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <div class="tabContainer" role="main">
+                    <h1 class="heading">Accessible Tabs Code Challenge</h1>
+
+            <div class= "buttonContainer" role ="tablist" aria-label="TabGroup">
+                <button role="tab"
+                        id="1"
+                        aria-selected="true"
+                        aria-controls="tab1-panel"
+                        onclick= "showPanel(0, colorCode[0])"
+                        onkeydown= "keyDownEventListener(event)">
+                    Tab1
+                </button>
+                <button role="tab"
+                        id="2"
+                        aria-selected="false"
+                        aria-controls="tab2-panel"
+                        tabindex: "-1"
+                        onclick= "showPanel(1, colorCode[1])"
+                        onkeydown= "keyDownEventListener(event)">
+                    Tab2
+                </button>
+                 <button role="tab"
+                        id="3"
+                        aria-selected="false"
+                        aria-controls="tab3-panel"
+                        tabindex: "-1"
+                        onclick= "showPanel(2, colorCode[2])"
+                        onkeydown= "keyDownEventListener(event)">
+                    Tab3
+                </button>
+                 <button role="tab"
+                        id="4"
+                        aria-selected="false"
+                        aria-controls="tab4-panel"
+                        tabindex: "-1"
+                        onclick= "showPanel(3, colorCode[3])"
+                        onkeydown= "keyDownEventListener(event)">
+                    Tab4
+                </button>
+            </div>
+            <div class="tabPanel"
+                 role="tabpanel"
+                 tabindex="0"
+                 id="tab1-panel"
+                 aria-labelledby="1"
+                 hidden: "">
+                Tab1 Content
+            </div>
+            <div class="tabPanel"
+                 role="tabpanel"
+                 tabindex="0"
+                 id="tab2-panel"
+                 aria-labelledby="2"
+                 hidden: "">
+                Tab2 Content
+            </div>
+            <div class="tabPanel"
+                 role="tabpanel"
+                 tabindex="0"
+                 id="tab3-panel"
+                 aria-labelledby="3"
+                 hidden: "">
+                Tab3 Content
+            </div>
+            <div class="tabPanel"
+                 role="tabpanel"
+                 tabindex="0"
+                 id="tab4-panel"
+                 aria-labelledby="4"
+                 hidden: "">
+                Tab4 Content
+            </div>
+            <div class="footer">Version: 1.0</div>
+
+        </div>
+
+            <script src="index.js"></script>
+
+    </body>
+</html>
